@@ -1,0 +1,48 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="${relativePackage}.${activityClass}" >
+
+    <TextView
+        android:id="@+id/am_receive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="接收的消息"/>
+
+    <EditText
+        android:id="@+id/am_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/am_receive"
+        android:layout_below="@+id/am_receive"
+        android:hint="发送的消息"/>
+
+    <Button
+        android:id="@+id/am_btn_scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/am_send"
+        android:layout_marginTop="22dp"
+        android:text="scan" />
+
+    <ListView
+        android:id="@+id/am_list"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/am_btn_scan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </ListView>
+
+    <Button
+        android:id="@+id/am_btn_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/am_list"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/am_btn_scan"
+        android:text="send" />
+
+</RelativeLayout>
